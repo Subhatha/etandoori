@@ -16,7 +16,7 @@ export default function Reservation() {
       <div className="mx-auto w-full max-w-6xl px-8">
         <motion.div initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.7 }} className="grid overflow-hidden rounded-[2rem] border border-white/10 bg-[#111111] lg:grid-cols-[0.95fr_1.05fr]">
           <div className="relative min-h-[21rem] lg:min-h-full">
-            <Image src="/images/dishes/3.jpg" alt={t.dishes.items[2].name} fill sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover" />
+            <Image src="/etandoori/images/dishes/3.jpg" alt={t.dishes.items[2].name} fill sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/40" />
             <p className="absolute bottom-7 left-7 max-w-xs text-2xl font-semibold leading-tight text-white md:bottom-10 md:left-10 md:text-3xl">{t.reservation.imageCopy}</p>
           </div>

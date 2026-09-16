@@ -16,7 +16,7 @@ export default function About() {
       <div className="mx-auto w-full max-w-6xl px-8">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-20">
           <motion.div initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.7 }} className="relative min-h-[30rem] overflow-hidden rounded-[2rem] border border-white/10 bg-[#111111] md:min-h-[38rem]">
-            <Image src="/images/dishes/2.jpg" alt={t.dishes.items[1].name} fill sizes="(min-width: 1024px) 52vw, 100vw" className="object-cover" />
+            <Image src="/etandoori/images/dishes/2.jpg" alt={t.dishes.items[1].name} fill sizes="(min-width: 1024px) 52vw, 100vw" className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between gap-6 p-7 md:p-10">
               <p className="max-w-[15rem] text-lg leading-7 text-white md:text-xl">{t.about.imageCopy}</p>

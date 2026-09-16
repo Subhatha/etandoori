@@ -5,7 +5,7 @@ export default function Logo() {
   return (
     <Link href="/" className="block">
       <Image
-        src="/images/logo/wordmark.png"
+        src="/etandoori/images/logo/wordmark.png"
         alt="eTandoori"
         width={240}
         height={55}

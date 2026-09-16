@@ -42,7 +42,7 @@ export const menuCategories: MenuCategory[] = [
           "de": "Joghurt, Tomate, Gurke und indische Gewürze."
         },
         "price": 5.9,
-        "image": "/images/menu/raita.png"
+        "image": "/etandoori/images/menu/raita.png"
       },
       {
         "id": "entrees-froides-2",
@@ -72,7 +72,7 @@ export const menuCategories: MenuCategory[] = [
           "de": "Grüner Salat, Hähnchen, Gurke, Tomate, Oliven und Hausdressing."
         },
         "price": 7.9,
-        "image": "/images/menu/chicken-salad.png"
+        "image": "/etandoori/images/menu/chicken-salad.png"
       }
     ]
   },
@@ -97,7 +97,7 @@ export const menuCategories: MenuCategory[] = [
           "de": "Mit Hackfleisch und indischen Gewürzen gefüllt. 2 Stück."
         },
         "price": 6.5,
-        "image": "/images/menu/samosas.png"
+        "image": "/etandoori/images/menu/samosas.png"
       },
       {
         "id": "entrees-chaudes-2",
@@ -112,7 +112,7 @@ export const menuCategories: MenuCategory[] = [
           "de": "Verschiedenes Gemüse in Weizenteig mit indischen Gewürzen."
         },
         "price": 5.5,
-        "image": "/images/menu/samosas.png"
+        "image": "/etandoori/images/menu/samosas.png"
       },
       {
         "id": "entrees-chaudes-3",
@@ -142,7 +142,7 @@ export const menuCategories: MenuCategory[] = [
           "de": "Hähnchenschenkel, in indischen Gewürzen mariniert und im Tandoor gebacken."
         },
         "price": 6.5,
-        "image": "/images/menu/tandoori-chicken.png"
+        "image": "/etandoori/images/menu/tandoori-chicken.png"
       },
       {
         "id": "entrees-chaudes-5",
@@ -157,7 +157,7 @@ export const menuCategories: MenuCategory[] = [
           "de": "Frisches Gemüse im Kichererbsenmehlteig mit indischen Gewürzen frittiert."
         },
         "price": 5.9,
-        "image": "/images/menu/vegetable-pakora.png"
+        "image": "/etandoori/images/menu/vegetable-pakora.png"
       },
       {
         "id": "entrees-chaudes-6",
@@ -242,7 +242,7 @@ export const menuCategories: MenuCategory[] = [
               "de": ""
             },
             "price": 5.0,
-            "image": "/images/menu/daal-soup.png"
+            "image": "/etandoori/images/menu/daal-soup.png"
           }
         ]
       }
@@ -269,7 +269,7 @@ export const menuCategories: MenuCategory[] = [
           "de": "Basmatireis mit Kreuzkümmel und Safran."
         },
         "price": 3.9,
-        "image": "/images/menu/basmati-rice.png"
+        "image": "/etandoori/images/menu/basmati-rice.png"
       },
       {
         "id": "riz-2",
@@ -284,7 +284,7 @@ export const menuCategories: MenuCategory[] = [
           "de": "Basmatireis mit Erbsen."
         },
         "price": 6.5,
-        "image": "/images/menu/pullao-rice.png"
+        "image": "/etandoori/images/menu/pullao-rice.png"
       }
     ]
   },
@@ -324,7 +324,7 @@ export const menuCategories: MenuCategory[] = [
           "de": "Weizenfladenbrot aus Hefeteig mit Knoblauch."
         },
         "price": 3.75,
-        "image": "/images/menu/garlic-naan.png"
+        "image": "/etandoori/images/menu/garlic-naan.png"
       },
       {
         "id": "pains-3",
@@ -354,7 +354,7 @@ export const menuCategories: MenuCategory[] = [
           "de": "Mit Käse gefülltes Weizenfladenbrot."
         },
         "price": 3.9,
-        "image": "/images/menu/cheese-naan.png"
+        "image": "/etandoori/images/menu/cheese-naan.png"
       },
       {
         "id": "pains-5",
@@ -409,7 +409,7 @@ export const menuCategories: MenuCategory[] = [
           "de": "Püree aus im Tandoor gerösteten Auberginen mit indischen Gewürzen."
         },
         "price": 7.5,
-        "image": "/images/menu/bartha.png"
+        "image": "/etandoori/images/menu/bartha.png"
       },
       {
         "id": "legumes-2",
@@ -508,7 +508,7 @@ export const menuCategories: MenuCategory[] = [
               "de": "In Currysauce mit milden Gewürzen geschmort."
             },
             "price": 14.4,
-            "image": "/images/menu/chicken-curry.png"
+            "image": "/etandoori/images/menu/chicken-curry.png"
           },
           {
             "id": "poulet-2",
@@ -523,7 +523,7 @@ export const menuCategories: MenuCategory[] = [
               "de": "Hähnchen ohne Knochen, mariniert und im Tandoor gegrillt, in einer Kräutersauce mit Crème fraîche."
             },
             "price": 15.4,
-            "image": "/images/menu/chicken-tikka-masala.png"
+            "image": "/etandoori/images/menu/chicken-tikka-masala.png"
           },
           {
             "id": "poulet-3",
@@ -538,7 +538,7 @@ export const menuCategories: MenuCategory[] = [
               "de": "Gegrilltes Hähnchen in einer Sahnesauce mit Butter und Käse."
             },
             "price": 15.4,
-            "image": "/images/menu/butter-chicken.png"
+            "image": "/etandoori/images/menu/butter-chicken.png"
           },
           {
             "id": "poulet-4",
@@ -653,7 +653,7 @@ export const menuCategories: MenuCategory[] = [
               "de": "Currysauce und milde Gewürze."
             },
             "price": 16.4,
-            "image": "/images/menu/lamb-curry.png"
+            "image": "/etandoori/images/menu/lamb-curry.png"
           },
           {
             "id": "agneau-2",
@@ -783,7 +783,7 @@ export const menuCategories: MenuCategory[] = [
               "de": "Currysauce und milde Gewürze."
             },
             "price": 14.9,
-            "image": "/images/menu/beef-curry.png"
+            "image": "/etandoori/images/menu/beef-curry.png"
           },
           {
             "id": "boeuf-2",
@@ -898,7 +898,7 @@ export const menuCategories: MenuCategory[] = [
               "de": "Geschälte Garnelen mit Currysauce und milden Gewürzen."
             },
             "price": 15.4,
-            "image": "/images/menu/prawn-curry.png"
+            "image": "/etandoori/images/menu/prawn-curry.png"
           },
           {
             "id": "crevette-2",
@@ -983,7 +983,7 @@ export const menuCategories: MenuCategory[] = [
               "de": "Im Tandoor gegrillt, mit Currysauce und milden Gewürzen."
             },
             "price": 15.4,
-            "image": "/images/menu/fish-curry.png"
+            "image": "/etandoori/images/menu/fish-curry.png"
           },
           {
             "id": "poisson-2",
@@ -1070,7 +1070,7 @@ export const menuCategories: MenuCategory[] = [
           "de": "Leicht scharfes Hähnchen ohne Knochen, mit Basmatireis, Trockenfrüchten und Mandeln geschmort."
         },
         "price": 14.4,
-        "image": "/images/menu/chicken-biryani.png"
+        "image": "/etandoori/images/menu/chicken-biryani.png"
       },
       {
         "id": "biryani-3",
@@ -1155,7 +1155,7 @@ export const menuCategories: MenuCategory[] = [
           "de": ""
         },
         "price": 6.0,
-        "image": "/images/menu/chocolate-fondant.png"
+        "image": "/etandoori/images/menu/chocolate-fondant.png"
       },
       {
         "id": "desserts-2",
