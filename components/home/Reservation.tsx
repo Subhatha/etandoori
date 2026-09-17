@@ -6,15 +6,15 @@ import { restaurant, restaurantCopy } from "@/lib/restaurant";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/components/i18n/LanguageProvider";
 
-const fieldClassName = "mt-2 w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-purple-500";
+const fieldClassName = "mt-2 w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white outline-none transition placeholder:text-zinc-600 focus:border-brand-500";
 
 export default function Reservation() {
   const { t, language } = useLanguage();
 
   return (
-    <section id="reservation" className="bg-[#0d0d0d] py-28 md:py-36">
+    <section id="reservation" className="bg-[#100d0b] py-28 md:py-36">
       <div className="mx-auto w-full max-w-6xl px-8">
-        <motion.div initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.7 }} className="grid overflow-hidden rounded-[2rem] border border-white/10 bg-[#111111] lg:grid-cols-[0.95fr_1.05fr]">
+        <motion.div initial={{ opacity: 0, y: 32 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.15 }} transition={{ duration: 0.7 }} className="grid overflow-hidden rounded-[2rem] border border-white/10 bg-[#15120f] lg:grid-cols-[0.95fr_1.05fr]">
           <div className="relative min-h-[21rem] lg:min-h-full">
             <Image src="/etandoori/images/dishes/3.jpg" alt={t.dishes.items[2].name} fill sizes="(min-width: 1024px) 48vw, 100vw" className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/40" />
@@ -22,10 +22,10 @@ export default function Reservation() {
           </div>
 
           <div className="p-7 md:p-10 lg:p-12">
-            <p className="text-sm uppercase tracking-[0.55em] text-purple-400">{t.reservation.eyebrow}</p>
+            <p className="text-sm uppercase tracking-[0.55em] text-brand-400">{t.reservation.eyebrow}</p>
             <h2 className="mt-5 text-4xl font-bold leading-[1.05] text-white md:text-5xl">{t.reservation.title}</h2>
             <p className="mt-5 max-w-lg text-base leading-8 text-zinc-400">{t.reservation.copy}</p>
-            <a href={restaurant.phoneHref} className="mt-4 inline-block text-sm text-purple-300 hover:text-white">{restaurantCopy[language].call}: {restaurant.phone}</a>
+            <a href={restaurant.phoneHref} className="mt-4 inline-block text-sm text-brand-300 hover:text-white">{restaurantCopy[language].call}: {restaurant.phone}</a>
 
             <form className="mt-9 grid gap-5" onSubmit={(event) => event.preventDefault()}>
               <div className="grid gap-5 sm:grid-cols-2">
@@ -56,7 +56,7 @@ export default function Reservation() {
                 {t.reservation.email}
                 <input type="email" placeholder={t.reservation.emailPlaceholder} className={fieldClassName} autoComplete="email" />
               </label>
-              <button type="submit" className="group mt-2 inline-flex w-fit items-center gap-3 rounded-full bg-purple-700 px-7 py-4 text-xs font-medium uppercase tracking-[0.24em] text-white transition hover:bg-purple-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-400">
+              <button type="submit" className="group mt-2 inline-flex w-fit items-center gap-3 rounded-full bg-ember-700 px-7 py-4 text-xs font-medium uppercase tracking-[0.24em] text-white transition hover:bg-ember-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400">
                 {t.reservation.submit}
                 <ArrowRight size={16} className="transition duration-300 group-hover:translate-x-1" />
               </button>

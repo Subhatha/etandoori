@@ -21,8 +21,8 @@ export default function CategorySection({ category, nested = false }: { category
       </div>
       {category.items.length > 0 && <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {category.items.map((dish) => (
-          <article key={dish.id} className="overflow-hidden rounded-2xl border border-white/10 bg-[#111111]">
-            <div className="relative aspect-[16/9] border-b border-white/5 bg-gradient-to-br from-purple-950/30 to-zinc-900">
+          <article key={dish.id} className="overflow-hidden rounded-2xl border border-white/10 bg-[#15120f]">
+            <div className="relative aspect-[16/9] border-b border-white/5 bg-gradient-to-br from-brand-950/30 to-zinc-900">
               {dish.image ? (
                 <Image src={dish.image} alt={dish.name[language]} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
               ) : (
@@ -35,7 +35,7 @@ export default function CategorySection({ category, nested = false }: { category
             <div className="p-5">
               <div className="flex items-start justify-between gap-4">
                 <DishHeading className="text-lg font-semibold leading-6 text-white">{dish.name[language]}</DishHeading>
-                {!dish.prices && <span className="shrink-0 text-sm font-medium leading-6 text-purple-300">{formatMenuPrice(dish.price, language)}</span>}
+                {!dish.prices && <span className="shrink-0 text-sm font-medium leading-6 text-brand-300">{formatMenuPrice(dish.price, language)}</span>}
               </div>
               {dish.description[language] && <p className="mt-3 text-sm leading-6 text-zinc-400">{dish.description[language]}</p>}
               {dish.prices && (
@@ -43,7 +43,7 @@ export default function CategorySection({ category, nested = false }: { category
                   {dish.prices.map((option) => (
                     <div key={option.label.fr} className="flex justify-between gap-3">
                       <dt className="text-zinc-400">{option.label[language]}</dt>
-                      <dd className="shrink-0 font-medium text-purple-300">{formatMenuPrice(option.price, language)}</dd>
+                      <dd className="shrink-0 font-medium text-brand-300">{formatMenuPrice(option.price, language)}</dd>
                     </div>
                   ))}
                 </dl>
@@ -56,7 +56,7 @@ export default function CategorySection({ category, nested = false }: { category
         <div className="mt-10 space-y-12">
           <nav aria-label={`${copy.navigation}: ${category.name[language]}`} className="flex flex-wrap gap-3">
             {category.subcategories.map((subcategory) => (
-              <a key={subcategory.id} href={`#menu-${subcategory.id}`} className="rounded-full border border-purple-500/30 px-4 py-2 text-sm text-purple-300 transition hover:border-purple-400 hover:text-white">
+              <a key={subcategory.id} href={`#menu-${subcategory.id}`} className="rounded-full border border-brand-500/30 px-4 py-2 text-sm text-brand-300 transition hover:border-brand-400 hover:text-white">
                 {subcategory.name[language]}
               </a>
             ))}

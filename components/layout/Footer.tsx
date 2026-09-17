@@ -16,15 +16,15 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t border-white/10 bg-[#090909] py-12">
+    <footer className="border-t border-white/10 bg-[#0c0a09] py-12">
       <div className="mx-auto w-full max-w-6xl px-8">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <Logo />
+            <Logo large />
             <p className="mt-5 max-w-sm text-sm leading-6 text-zinc-500">{t.footer.description}</p>
             <address className="mt-4 text-sm not-italic leading-7 text-zinc-400">
               <a href={restaurantDirectionsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white">{restaurant.street}<br />{restaurant.city}</a><br />
-              <a href={restaurant.phoneHref} className="text-purple-300 hover:text-white">{restaurant.phone}</a>
+              <a href={restaurant.phoneHref} className="text-brand-300 hover:text-white">{restaurant.phone}</a>
             </address>
             <a href={restaurant.website} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-xs text-zinc-400 hover:text-white">{copy.website}: esushi.fr ↗</a>
           </div>
