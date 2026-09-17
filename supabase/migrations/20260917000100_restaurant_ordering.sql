@@ -4,7 +4,13 @@ create schema if not exists private;
 revoke all on schema private from public;
 grant usage on schema private to authenticated;
 
-create type public.restaurant_role as enum ('admin', 'staff');
+do $$
+begin
+  create type public.restaurant_role as enum ('admin', 'staff');
+exception
+  when duplicate_object then null;
+end
+$$;
 create type public.order_type as enum ('delivery', 'pickup');
 create type public.payment_status as enum ('pending', 'paid', 'failed', 'refunded');
 create type public.order_status as enum ('new', 'accepted', 'preparing', 'ready', 'completed', 'rejected', 'cancelled');
