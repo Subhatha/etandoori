@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CartProvider from "@/components/ordering/CartProvider";
 import LanguageProvider from "@/components/i18n/LanguageProvider";
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body><LanguageProvider>{children}</LanguageProvider></body>
+      <body><LanguageProvider><CartProvider>{children}</CartProvider></LanguageProvider></body>
     </html>
   );
 }

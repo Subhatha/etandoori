@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
     root: __dirname,
   },
 
-  output: "export",
   trailingSlash: true,
 
   basePath: process.env.NODE_ENV === "production" ? "/etandoori" : "",

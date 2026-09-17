@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { orderingCopy } from "@/lib/ordering/copy";
 import { useLanguage } from "@/components/i18n/LanguageProvider";
 import { menuCategories } from "@/lib/menu";
 import { menuCopy } from "@/lib/menu-copy";
@@ -16,6 +18,7 @@ export default function FullMenu() {
           <p className="text-sm uppercase tracking-[0.4em] text-brand-400">{copy.eyebrow}</p>
           <h1 className="mt-6 text-5xl font-bold leading-tight text-white md:text-7xl">{copy.title}</h1>
           <p className="mt-6 text-lg leading-8 text-zinc-400">{copy.copy}</p>
+          <Link href="/order-online" className="mt-6 inline-flex rounded-full bg-ember-700 px-6 py-3 text-sm text-white hover:bg-ember-600">{orderingCopy[language].order}</Link>
         </div>
         <nav aria-label={copy.navigation} className="mb-16 flex flex-wrap justify-center gap-2" lang={language}>
           {menuCategories.map((category) => (

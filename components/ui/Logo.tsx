@@ -14,7 +14,7 @@ export default function Logo({ large = false }: { large?: boolean }) {
         priority={!large}
         className={`${large ? "h-28 w-28" : "h-16 w-16"} shrink-0 rounded-full object-contain select-none`}
       />
-      <span aria-hidden="true" className="whitespace-nowrap font-serif text-2xl tracking-tight text-brand-400 sm:text-3xl">
+      <span aria-hidden="true" className={`${large ? "" : "hidden min-[400px]:inline"} whitespace-nowrap font-serif text-2xl tracking-tight text-brand-400 sm:text-3xl`}>
         <span className="text-ember-500">E-</span>tandoori
       </span>
     </Link>

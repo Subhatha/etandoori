@@ -37,3 +37,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Supabase database foundation
+
+See [docs/supabase.md](docs/supabase.md) for environment variables, the initial
+migration, access policies, Realtime, and manual project setup. Existing pages
+continue to use the local menu and do not require Supabase credentials to build.
+
+## Customer ordering
+
+See [docs/ordering.md](docs/ordering.md) for cart/checkout setup, the additional
+SQL migration, delivery minimums and fees, security, tests, and hosting. Ordering
+requires a Next.js server and Supabase; static GitHub Pages hosting cannot run it.

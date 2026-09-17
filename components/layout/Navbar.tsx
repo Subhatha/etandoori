@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { languageOptions, useLanguage } from "@/components/i18n/LanguageProvider";
+import CartLink from "@/components/ordering/CartLink";
 import Logo from "../ui/Logo";
 
 const languageCodes = ["fr", "en", "de"] as const;
@@ -56,11 +57,14 @@ export default function Navbar() {
 
         <div className="hidden items-center justify-self-end xl:flex xl:gap-4">
           {languageSwitcher()}
+          <CartLink />
           <Link href="/order-online" className="whitespace-nowrap rounded-full border border-brand-600 px-5 py-3 text-xs uppercase tracking-[0.18em] text-white transition hover:bg-ember-700">
             {t.nav.orderOnline}
           </Link>
         </div>
 
+        <div className="flex items-center gap-3 xl:hidden">
+          <CartLink />
         <button
           type="button"
           aria-label={isMenuOpen ? t.nav.closeMenu : t.nav.openMenu}
@@ -70,6 +74,7 @@ export default function Navbar() {
         >
           {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
         </button>
+        </div>
 
         {isMenuOpen && (
           <div className="absolute inset-x-0 top-full border-b border-white/10 bg-[#0c0a09]/98 px-5 py-7 shadow-2xl shadow-black/30 sm:px-8 xl:hidden">
