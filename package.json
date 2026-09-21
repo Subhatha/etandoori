@@ -10,8 +10,12 @@
     "db:seed": "node --conditions=react-server --import tsx scripts/seed-menu.ts",
     "test:menu": "node --import tsx tests/menu-data.test.ts",
     "test:ordering": "node --import tsx tests/ordering.test.ts",
-    "test": "npm run test:menu && npm run test:ordering && npm run test:database",
-    "test:database": "node --test tests/database.test.mjs"
+    "test": "npm run test:menu && npm run test:ordering && npm run test:database && npm run test:admin && npm run test:tracking",
+    "test:database": "node --test tests/database.test.mjs",
+    "test:admin": "node --import tsx tests/admin.test.ts",
+    "test:admin:browser": "playwright test",
+    "test:tracking": "node --conditions=react-server --import tsx tests/tracking.test.ts",
+    "test:customer:browser": "playwright test tests/tracking.browser.spec.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.116.0",
@@ -24,6 +28,7 @@
   },
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.8",
+    "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",

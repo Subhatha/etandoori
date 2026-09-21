@@ -22,6 +22,7 @@ export type OrderInput = {
   requestId: string; language: Language; customer: Customer; items: CartLine[];
 };
 export type Receipt = {
+  tracking?: { token: string; expiresAt: number };
   id: string; order_number: number; order_type: "delivery" | "pickup";
   customer_name: string; customer_phone: string; customer_email: string | null;
   delivery_address: string | null; customer_notes: string | null;

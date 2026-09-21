@@ -1,3 +1,4 @@
+import { issueTrackingToken } from "@/lib/ordering/tracking-token";
 import { createHash } from "node:crypto";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { getOrderingCatalog } from "@/lib/ordering/catalog";
@@ -41,6 +42,7 @@ export async function POST(request: Request) {
     const config = checkoutConfig();
     const delivery = existing ? { fee: 0, minimum: 0 } : selectedDelivery(input, config.zones);
     const priced = existing ? null : priceOrder(input, await getOrderingCatalog(), delivery.fee, delivery.minimum);
+    const tracking = issueTrackingToken(input.requestId);
     const { data, error } = await admin.rpc("create_restaurant_order", {
       p_request_id: input.requestId, p_fingerprint: fingerprint,
       p_customer: { ...input.customer }, p_items: priced?.items ?? [],
@@ -51,7 +53,7 @@ export async function POST(request: Request) {
       if (/request_conflict/.test(error.message)) throw new OrderError("conflict", 409);
       throw new OrderError("unavailable", 503);
     }
-    return Response.json({ order: data as unknown as Receipt }, { status: existing ? 200 : 201, headers });
+    return Response.json({ order: { ...(data as unknown as Receipt), tracking } }, { status: existing ? 200 : 201, headers });
   } catch (error) {
     const known = error instanceof OrderError;
     return Response.json({ error: known ? error.code : "unavailable" }, { status: known ? error.status : 503, headers });

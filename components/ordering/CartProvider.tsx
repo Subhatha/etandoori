@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useMemo, useState, useSyncExternalStore } from "react";
 import { addCartItem, readCart, cartCount, removeSubmitted, MAX_QUANTITY, MAX_TOTAL_QUANTITY } from "@/lib/ordering/cart";
+import { saveTracking } from "@/lib/ordering/tracking-storage";
 import type { CartLine, Receipt } from "@/lib/ordering/types";
 
 const storageKey = "etandoori-cart-v1";
@@ -53,6 +54,7 @@ export default function CartProvider({ children }: { children: React.ReactNode }
     clear: () => mutate(() => []),
     complete: (result, submitted) => {
       setReceipt(result);
+      if (!saveTracking(result)) setStorageError(true);
       try { window.sessionStorage.setItem("etandoori-receipt", JSON.stringify(result)); window.sessionStorage.removeItem("etandoori-order-attempt"); } catch { setStorageError(true); }
       mutate((items) => removeSubmitted(items, submitted));
     },

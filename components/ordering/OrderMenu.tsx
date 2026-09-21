@@ -1,4 +1,5 @@
 "use client";
+import RecentOrderLink from "./RecentOrderLink";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -48,7 +49,7 @@ function OrderingCategory({ category, items }: { category: MenuCategory; items: 
 export default function OrderMenu() {
   const { language } = useLanguage(); const copy = orderingCopy[language]; const catalog = useCatalog(); const { count } = useCart();
   return <OrderShell>
-    <div className="mb-10 flex flex-wrap items-center justify-between gap-5"><h1 className="text-4xl font-semibold md:text-5xl">{copy.order}</h1><Link href="/cart" className={buttonClass}>{copy.cart} ({count})</Link></div>
+    <div className="mb-10 flex flex-wrap items-center justify-between gap-5"><h1 className="text-4xl font-semibold md:text-5xl">{copy.order}</h1><div className="flex flex-wrap gap-3"><RecentOrderLink /><Link href="/cart" className={buttonClass}>{copy.cart} ({count})</Link></div></div>
     {catalog.loading ? <p role="status">{copy.loading}</p> : catalog.error || !catalog.items.length ? <div role="alert"><p>{copy.unavailable}</p><button className={`${buttonClass} mt-4`} onClick={() => void catalog.refresh()}>{copy.retry}</button></div> : <>
       <nav className="mb-12 flex flex-wrap gap-2" aria-label={copy.browse}>{menuCategories.map((category) => <a key={category.id} href={`#order-${category.id}`} className="rounded-full border border-white/15 px-4 py-2 text-sm text-brand-300">{category.name[language]}</a>)}</nav>
       <div className="space-y-12">{menuCategories.map((category) => <OrderingCategory key={category.id} category={category} items={catalog.items} />)}</div>

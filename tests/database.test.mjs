@@ -18,8 +18,10 @@ test('PostgreSQL constraints, RLS, atomic checkout and retry protection', async 
     for (const file of [
       'supabase/migrations/20260917000100_restaurant_ordering.sql',
       'supabase/migrations/20260917000200_secure_order_creation.sql',
+      'supabase/migrations/20260921000100_order_status_transitions.sql',
       'supabase/tests/ordering.sql',
       'supabase/tests/checkout.sql',
+      'supabase/tests/admin.sql',
     ]) await db.exec(await readFile(file, 'utf8'));
   } finally { await db.close(); }
 });

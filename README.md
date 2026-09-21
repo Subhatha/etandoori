@@ -49,3 +49,8 @@ continue to use the local menu and do not require Supabase credentials to build.
 See [docs/ordering.md](docs/ordering.md) for cart/checkout setup, the additional
 SQL migration, delivery minimums and fees, security, tests, and hosting. Ordering
 requires a Next.js server and Supabase; static GitHub Pages hosting cannot run it.
+
+## Restaurant tablet dashboard
+
+See [docs/restaurant-dashboard.md](docs/restaurant-dashboard.md) for staff login,
+Realtime alerts, the new status-transition migration, first-admin setup and tests.
